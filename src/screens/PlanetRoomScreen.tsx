@@ -58,30 +58,12 @@ export function PlanetRoomScreen({ route, navigation }: any) {
       </View>
 
       <View style={styles.sceneFrame}>
-        <PlanetRoomScene bodyId={bodyId} rotation={rotation} />
+        <PlanetRoomScene bodyId={bodyId} />
         <View pointerEvents="none" style={styles.sceneLabel}>
           <Text style={styles.sceneLabelName}>
-            {body.emoji} {body.name}
+            {body.emoji} {body.name} 3D Tour
           </Text>
           <Text style={styles.sceneLabelType}>{body.badge.toUpperCase()}</Text>
-        </View>
-        <View style={styles.rotationControls}>
-          <TouchableOpacity
-            accessibilityRole="button"
-            accessibilityLabel="Chapga burish"
-            onPress={() => setRotation((value) => value - 0.6)}
-            style={styles.rotationButton}
-          >
-            <Ionicons name="arrow-back-outline" size={19} color="#FFFFFF" />
-          </TouchableOpacity>
-          <TouchableOpacity
-            accessibilityRole="button"
-            accessibilityLabel="O‘ngga burish"
-            onPress={() => setRotation((value) => value + 0.6)}
-            style={styles.rotationButton}
-          >
-            <Ionicons name="arrow-forward-outline" size={19} color="#FFFFFF" />
-          </TouchableOpacity>
         </View>
       </View>
 
