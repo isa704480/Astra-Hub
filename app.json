@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Astro Hub",
-    "slug": "astro-hub",
+    "name": "Astra Hub",
+    "slug": "astra-hub",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
