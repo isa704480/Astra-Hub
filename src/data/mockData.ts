@@ -313,16 +313,9 @@ export const spaceBodies: SpaceBody[] = [
   },
 ];
 
-export const planetYouTubeVideos: Record<CelestialType, string> = {
-  mercury: "0KBjhQXNKK0",
-  venus: "2y0C4s0a2Qc",
+export const planetYouTubeVideos: Partial<Record<CelestialType, string>> = {
   earth: "HCDVN7DCzYE",
-  moon: "64O0gN6d304",
-  mars: "I-88Yu0X_2A",
-  jupiter: "s56dxOIJbuU",
-  saturn: "E87uMsmXgD8",
   uranus: "m4NXbFOiOGk",
-  neptune: "1h5v0e2K8f8",
 };
 
 const solarSystemOrder: string[] = [

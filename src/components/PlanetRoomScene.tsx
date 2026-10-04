@@ -2,6 +2,7 @@ import React from "react";
 import { Platform, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
 import { CelestialType, planetYouTubeVideos } from "../data/mockData";
+import { Planet3DView } from "./Planet3DView";
 
 interface PlanetRoomSceneProps {
   bodyId: CelestialType;
@@ -9,7 +10,13 @@ interface PlanetRoomSceneProps {
 }
 
 export function PlanetRoomScene({ bodyId }: PlanetRoomSceneProps) {
-  const videoId = planetYouTubeVideos[bodyId] ?? "HCDVN7DCzYE";
+  const videoId = planetYouTubeVideos[bodyId];
+
+  // Video yo'q bo'lsa — 3D sayyora ko'rinishi
+  if (!videoId) {
+    return <Planet3DView bodyId={bodyId} />;
+  }
+
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&playsinline=1&modestbranding=1`;
 
   if (Platform.OS === "web") {

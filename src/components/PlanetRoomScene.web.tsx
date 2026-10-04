@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { CelestialType, planetYouTubeVideos } from "../data/mockData";
+import { Planet3DView } from "./Planet3DView";
 
 interface PlanetRoomSceneProps {
   bodyId: CelestialType;
@@ -8,7 +9,12 @@ interface PlanetRoomSceneProps {
 }
 
 export function PlanetRoomScene({ bodyId }: PlanetRoomSceneProps) {
-  const videoId = planetYouTubeVideos[bodyId] ?? "HCDVN7DCzYE";
+  const videoId = planetYouTubeVideos[bodyId];
+
+  if (!videoId) {
+    return <Planet3DView bodyId={bodyId} />;
+  }
+
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&playsinline=1&modestbranding=1`;
 
   return (
