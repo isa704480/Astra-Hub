@@ -1,19 +1,7 @@
 import React from "react";
 import { Platform, StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
-import { CelestialType } from "../data/mockData";
-
-export const planetYouTubeVideos: Record<CelestialType, string> = {
-  mercury: "0KBjhQXNKK0",
-  venus: "2y0C4s0a2Qc",
-  earth: "HCDVN7DCzYE",
-  moon: "64O0gN6d304",
-  mars: "I-88Yu0X_2A",
-  jupiter: "s56dxOIJbuU",
-  saturn: "E87uMsmXgD8",
-  uranus: "m4NXbFOiOGk",
-  neptune: "1h5v0e2K8f8",
-};
+import { CelestialType, planetYouTubeVideos } from "../data/mockData";
 
 interface PlanetRoomSceneProps {
   bodyId: CelestialType;

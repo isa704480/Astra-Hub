@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { CelestialType } from "../data/mockData";
-import { planetYouTubeVideos } from "./PlanetRoomScene";
+import { CelestialType, planetYouTubeVideos } from "../data/mockData";
 
 interface PlanetRoomSceneProps {
   bodyId: CelestialType;
